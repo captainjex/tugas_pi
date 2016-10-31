@@ -1,0 +1,167 @@
+<html>
+
+	<head>
+		<style>
+			div.container{
+				margin-left:3em;
+				margin-right:3em;
+				margin-top:3em;
+				border: 1px solid black;
+				overflow:auto;
+				background-color:#dbdcdd;
+			}
+			p.header{
+				padding-left:1em;
+				font-family:"Bauhaus 93";
+				font-size:50px;
+
+			}
+			p.side{
+				font:"Bauhaus 93";
+			}
+			i.sub{
+				font-family:"times new roman";
+				font-size:20px;
+				margin-left:1em;
+			}
+			nav{
+
+				padding:5px 1em;
+				border:1px solid black;
+				border-left:0px;
+				border-right:0px;
+			}
+			button{
+				background-color:#239ab2;
+				border:none;
+				border-radius:8px;
+				color:yellow;
+				text-align:center;
+				margin:4px 2px;
+				padding:10px 20px;
+				font-size:16px;
+			}
+			.order{
+				width:100%;
+			}
+			.forms{
+				font-size:12px;
+				margin-top:10px;
+				padding:8px 8px;
+			}
+			article{
+				float:left;
+				padding:1em 1em;
+				width: 59%;
+			}
+			form{
+				background-color:#868b8c;
+				padding:1em 1em;
+				margin-left:40%;
+				width:200px;
+				border:1px solid black;
+			}
+			aside{
+				max-width: 35%;
+				float:right;
+				padding:1em 10px;
+				border-left:1px solid black;
+				width:47%;
+			}
+			.btnaside{
+				width:100%;
+			}
+			img{
+				width:304px;
+				height:228px;
+			}
+			div.footer{
+				margin-left:3em;
+				margin-right:3em;
+				border: 1px solid black;
+				text-align:center;
+				border-top:0px;
+				background-color:#d0d3d8;
+			}
+
+
+		</style>
+
+		<title>
+			Pasar Online
+		</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<header>
+				<p class="header">Pasar Online<br>
+				<i class="sub">Tempat nyaman berbelanja</i></p>
+			</header>
+			<nav>
+				<a href="main.html"><button>Beranda</button></a>
+				<a href="about.html"><button>Tentang Kami</button></a>
+				<a href="produk.html"><button>Produk</button></a>
+				<button>Belanja</button>
+				<button>Bantuan</button>
+				<button>Buku Tamu</button>
+				<input name="search" type="text">
+				<button name="search_submit" type="submit">Go</button>
+			</nav>
+			<article>
+				<h2>Pasar Online</h2>
+				<p>Kami Menyediakan segala kebutuhan yang anda butuhkan. Tidak hanya sembako, namun peralatan elektronik serta buku buku semua ada disini.
+				<p> Selamat berbelanja.....!
+				<h3>INFO</h3>
+				<p> Ingin memesan, klik belanja.
+				<h3>LOKASI KAMI</h3>
+				<p>Jalan Tambak Dalam Raya no.13 Semarang, Jawa tengah, Indonesia</p>
+
+				<button class="order">Simulasi Order Barang</button>
+				<br><br>
+				<form name="itungan">
+					Harga		: <input type="number" name="harga" id="input1">
+
+					Jumlah		: <input type="number" name="jumlah" id="input2">
+
+					Diskon		: <input type="number" name="diskon" id="input3">
+
+					Jml Diskon	: <input type="number" name="ndiskon" id="output1">
+
+					Total		: <input type="number" name="total" id="output2">
+					<br><br>
+					<input type="button" value="Hitung" onclick="kalkulasi();"/>
+					<input type="reset">
+				</form>
+			</article>
+			<aside>
+				<button class="btnaside">List Produk</button>
+				<center><img src="1.jpg" style="margin-top:20px" title="Novel Laskar Pelangi"></img></center>
+				<center><p>Rp75.000,00</p></center>
+				<center><img src="2.jpg" title="Pembelajaran C++"></img></center>
+				<center><p>Rp80.000,00</p></center>
+				<center><img src="3.jpg" title="kopi luwak"></img></center>
+				<center><p>Rp59.000,00</p></center>
+				<center><img src="4.jpg" title="Printer Canon"></img></center>
+				<center><p>Rp250.000,00</p></center>
+			</aside>
+		</div>
+		<div class="footer">
+			Copyright &copy 2016 A11.2014.08073 Muhammad Arji' Sharofuddin, All Right Reserved
+		</div>
+
+
+		<script type="text/javascript">
+			function kalkulasi(){
+				var inputharga=document.itungan.harga.value;
+				var inputjumlah=document.itungan.jumlah.value;
+				var inputdiskon=document.itungan.diskon.value;
+				outputndiskon=((inputharga*inputjumlah)/100)*inputdiskon;
+				outputtotal=inputharga*inputjumlah-(((inputharga*inputjumlah)/100)*inputdiskon);
+				document.itungan.ndiskon.value=outputndiskon;
+				document.itungan.total.value=outputtotal;
+			}
+		</script>
+	</body>
+
+</html>
