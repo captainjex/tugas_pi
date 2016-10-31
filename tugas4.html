@@ -10,11 +10,10 @@
             <td><font color="#ff9800" size="6">Calon Peserta</font></td>
         </tr>
     </table>
-    <div style="background-color:#08adce;height:5px;width:100%"> </div>
-    <div style="background-color:#006fba;height:30px;width:100%"> </div>
+    <div style="background-color:#006fba;height:30px;width:100%;border-top: 5px solid #08adce;"> </div>
     <table>
         <tr>
-            <td>
+            <td width="60%">
                 <table>
                     <tr>
                         <td>Kabupaten</td>
@@ -36,11 +35,127 @@
                     </tr>
                     <tr>
                         <td>Tempat Lahir</td>
-                        <td><input name="tmptlahir" type="text"></td>
+                        <td><input name="tempatlahir" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Tgl. Lahir</td>
+                        <td><input name="tgllahir" type="date"> Contoh: 1990-10-10</td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin</td>
+                        <td><select name="gender">
+                                <option value="pria">L</option>
+                                <option value="wanita">P</option>
+                            </select> Ket: isi L/P
+                        </td>
+                    </tr>
+                    <tr><td>Pendidikan</td></tr>
+                    <tr>
+                        <td>- Sarjana</td>
+                        <td><select name="sarjana" required="">
+                                <option value="">None</option>
+                                <option value="pertanian">Pertanian</option>
+                                <option value="perternakan">Perternakan</option>
+                                <option value="ilmu_komputer">Ilmu Komputer</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>- Fakultas</td>
+                        <td><input name="fakultas" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>- Universitas</td>
+                        <td><input name="universitas" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Organisasi</td>
+                        <td><input type="text" name="organisasi"></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat Rumah</td>
+                        <td><input name="alamat" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Kota</td>
+                        <td><input name="kota" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Telepon</td>
+                        <td><input name="telepon" type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>HP</td>
+                        <td><input name="HP" type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input name="email" type="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Kabupaten Penugasan</td>
+                        <td><select name="penugasan" required="">
+                                <option value="">None</option>
+                                <option value="kab_semarang">Kab. Semarang</option>
+                                <option value="kab_tegal">Kab. Tegal</option>
+                                <option value="kab_pekalongan">Kab. Pekalongan</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nama Orang Tua</td>
+                    </tr>
+                    <tr>
+                        <td>- Bapak</td>
+                        <td><input name="bapak" required="" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>- Pekerjaan</td>
+                        <td><input name="pekerjaanbpk" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>- Alamat</td>
+                        <td><input name="alamatbpk" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>- Kota</td>
+                        <td><input type="text" name="kotabpk"></td>
+                    </tr>
+                    <tr>
+                        <td>- Ibu</td>
+                        <td><input type="text" name="ibu"></td>
+                    </tr>
+                    <tr>
+                        <td>- Pekerjaan</td>
+                        <td><input name="pekerjaanibu" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>- Alamat</td>
+                        <td><input name="alamatibu" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>- Kota</td>
+                        <td><input type="text" name="kotaibu"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right"><input value="submit" type="submit"><input type="reset"></td>
                     </tr>
                 </table>
             </td>
-            <td></td>
+            <td valign="top" width="39%">
+                Berkas : <br>
+                <input type="checkbox" name="berkas" value="surat_lamaran">Surat Lamaran<br>
+                <input type="checkbox" name="berkas" value="fc_ijazahtranskrip">Fc Ijazah & Transkrip<br>
+                <input type="checkbox" name="berkas" value="fc_ktp_jateng">Fc KTP Jateng<br>
+                <input type="checkbox" name="berkas" value="pernyataan_kontrak">Pernyataan Tdk Terikat Kontrak<br>
+                <input type="checkbox" name="berkas" value="skck">SKCK<br>
+                <input type="checkbox" name="berkas" value="surat_sehat">Surat Ket. Sehat<br>
+                <input type="checkbox" name="berkas" value="pernyataan_single">Pernyataan Belum Menikah<br>
+                <input type="checkbox" name="berkas" value="pernyataan_tdk_pns">Pernyataan Tdk Lamar PNS<br>
+                <input type="checkbox" name="berkas" value="foto">Pas Foto 3Lbr<br>
+                Keterangan<br>
+                <textarea name="keterangan" rows="2" cols="100"></textarea>
+            </td>
         </tr>
     </table>
 </body>
